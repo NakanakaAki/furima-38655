@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'posts', to: 'items#index'
+  root to: 'items#index'
 
 end
