@@ -29,7 +29,7 @@ has_many:buyers
 | status_id          | integer    | null: false                    |
 | delivery_charge_id | integer    | null: false                    |
 | shipping_area_id   | integer    | null: false                    |
-| delivery_days_id   | integer    | null: false                    |
+| delivery_day_id   | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
@@ -40,7 +40,7 @@ has_one:buyer
 belongs_to:category
 belongs_to:status
 belongs_to:delivery_charge
-belongs_to:delivery_days
+belongs_to:delivery_day
 belongs_to:shipping_are
 
 ## shipping_addresses テーブル
@@ -62,10 +62,10 @@ belongs_to:shipping_area
 
 ## buyers テーブル
 
-| Column                | Type       | Options                        |
-| ------------------    | ---------- | ------------------------------ |
-| user_id               | references  | null: false, foreign_key: true |
-| item_id               | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
 
 ### Association
 
