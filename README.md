@@ -16,7 +16,7 @@
 
 ### Association
 has_many:items
-has_many:buyer
+has_many:buyers
 
 
 ## items テーブル
@@ -27,7 +27,7 @@ has_many:buyer
 | description        | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | status_id          | integer    | null: false                    |
-| delivery_charge_ud | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
 | shipping_area_id   | integer    | null: false                    |
 | delivery_days_id   | integer    | null: false                    |
 | price              | integer    | null: false                    |
@@ -62,10 +62,10 @@ belongs_to:shipping_area
 
 ## buyers テーブル
 
-| Column                | Type    | Options                        |
-| ------------------    | ------- | ------------------------------ |
-| user_id               | string  | null: false, foreign_key: true |
-| item_id               | string  | null: false, foreign_key: true |
+| Column                | Type       | Options                        |
+| ------------------    | ---------- | ------------------------------ |
+| user_id               | references  | null: false, foreign_key: true |
+| item_id               | references | null: false, foreign_key: true |
 
 ### Association
 
