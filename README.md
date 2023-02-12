@@ -29,7 +29,7 @@ has_many:buyers
 | status_id          | integer    | null: false                    |
 | delivery_charge_id | integer    | null: false                    |
 | shipping_area_id   | integer    | null: false                    |
-| delivery_day_id   | integer    | null: false                    |
+| delivery_day_id    | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
@@ -41,7 +41,7 @@ belongs_to:category
 belongs_to:status
 belongs_to:delivery_charge
 belongs_to:delivery_day
-belongs_to:shipping_are
+belongs_to:shipping_area
 
 ## shipping_addresses テーブル
 
