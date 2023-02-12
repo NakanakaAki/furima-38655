@@ -1,16 +1,17 @@
 require 'rails_helper'
 RSpec.describe Item, type: :model do
   before do
-    @item = FactoryBot.create(:item)
+    @item = FactoryBot.build(:item)
   end
 
   describe '商品の出品登録' do
     context '出品登録ができるとき' do
       it '全ての入力事項が、存在すれば登録できる' do
+
         expect(@item).to be_valid
       end
       it 'カテゴリーが「---」以外であれば登録できる' do
-        @item.category_id = 2
+        @item.category_id = 1
         expect(@item).to be_valid
       end
       it '商品の状態が「---」以外であれば登録できる' do
@@ -37,7 +38,7 @@ RSpec.describe Item, type: :model do
 
     context '出品ができないとき' do
       it 'ユーザー登録している人でないと出品できない' do
-        @item.user_id = nil
+        @item.user = nil
         @item.valid?
         expect(@item.errors.full_messages).to include('User must exist')
       end
@@ -111,6 +112,13 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
+
+      it '価格に半角数字以外が含まれている場合出品できない' do
+        @item.price = "あああ"
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is not a number")
+      end
+
       it '価格の範囲が、300円未満だと出品できない' do
         @item.price = 100
         @item.valid?
