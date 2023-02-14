@@ -10,8 +10,8 @@ class Item < ApplicationRecord
     validates :shipping_area_id
     validates :delivery_day_id
     validates :price
-    
-    #validates :user_id
+
+    # validates :user_id
   end
 
   validates :price,
