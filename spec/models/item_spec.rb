@@ -7,7 +7,6 @@ RSpec.describe Item, type: :model do
   describe '商品の出品登録' do
     context '出品登録ができるとき' do
       it '全ての入力事項が、存在すれば登録できる' do
-
         expect(@item).to be_valid
       end
       it 'カテゴリーが「---」以外であれば登録できる' do
@@ -114,9 +113,9 @@ RSpec.describe Item, type: :model do
       end
 
       it '価格に半角数字以外が含まれている場合出品できない' do
-        @item.price = "あああ"
+        @item.price = 'あああ'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not a number")
+        expect(@item.errors.full_messages).to include('Price is not a number')
       end
 
       it '価格の範囲が、300円未満だと出品できない' do
