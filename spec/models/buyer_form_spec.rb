@@ -2,10 +2,13 @@ require 'rails_helper'
 
 RSpec.describe BuyerForm, type: :model do
   before do
-    @buyer_form = FactoryBot.build(:buyer_form)
+    user = FactoryBot.create(:user)
+    item = FactoryBot.create(:item)
+    @buyer_form = FactoryBot.build(:buyer_form, user_id: user.id, item_id: item.id)
   end
 
   describe '配送先情報の保存' do
+    binding.pry
     context '配送先情報の保存ができるとき' do
       it 'すべての値が正しく入力されていれば保存できること' do
         expect(@buyer_form).to be_valid
@@ -97,6 +100,11 @@ RSpec.describe BuyerForm, type: :model do
       end
       it '電話番号が12桁以上あると保存できないこと' do
         @buyer_form.phone_number = 12_345_678_910_111_213
+        @buyer_form.valid?
+        expect(@buyer_form.errors.full_messages).to include('Phone number is invalid')
+      end
+      it '電話番号が9桁以下では保存できないこと' do
+        @buyer_form.phone_number = 123456789
         @buyer_form.valid?
         expect(@buyer_form.errors.full_messages).to include('Phone number is invalid')
       end
