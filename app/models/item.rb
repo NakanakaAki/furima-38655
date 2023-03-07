@@ -22,7 +22,7 @@ class Item < ApplicationRecord
 
   # テーブルとのアソシエーション
   belongs_to :user
-
+  has_one    :buyer
   # アクティブハッシュとのアソシエーション
   belongs_to :category
   belongs_to :status
