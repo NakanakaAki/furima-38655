@@ -32,4 +32,20 @@ namespace :deploy do
   end
 
   set :branch, 'main'
+
+  namespace :deploy do
+    desc 'Run bundle install'
+    task :bundle_install do
+      on roles(:app) do
+        within release_path do
+          with rails_env: fetch(:rails_env) do
+            execute :bundle, :install, "--path vendor/bundle"
+          end
+        end
+      end
+    end
+  end
+  
+  before 'deploy:assets:precompile', 'deploy:bundle_install'
+
 end
