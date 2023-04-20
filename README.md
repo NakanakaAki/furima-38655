@@ -32,7 +32,8 @@ Pass: 2222
 
 # 実装機能
 ## 1.トップページ
-[![Image from Gyazo](https://i.gyazo.com/a2d0c2cef7c9eb86b55cbe9061bdda69.gif)](https://gyazo.com/a2d0c2cef7c9eb86b55cbe9061bdda69)
+
+[![Image from Gyazo](https://i.gyazo.com/df824a05d5494a712e0eb86a0f670f88.gif)](https://gyazo.com/df824a05d5494a712e0eb86a0f670f88)
 
 
 ## 2.ユーザー登録機能
@@ -67,93 +68,17 @@ Pass: 2222
 [![Image from Gyazo](https://i.gyazo.com/9cfd9a3d3ca514fa9cbaaad4b490feff.gif)](https://gyazo.com/9cfd9a3d3ca514fa9cbaaad4b490feff)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # テーブル設計
+## ER図
 
-## users テーブル
+[![Image from Gyazo](https://i.gyazo.com/3d52a53b49a20f9b814f34214eab41b1.png)](https://gyazo.com/3d52a53b49a20f9b814f34214eab41b1)
 
-| Column             | Type   | Options                       |
-| ------------------ | ------ | ----------------------------- |
-| nickname           | string | null: false                   |
-| email              | string | null: false,unique: true      |
-| encrypted_password | string | null: false                   |
-| last_name          | string | null: false                   |
-| first_name         | string | null: false                   |
-| last_name_kana     | string | null: false                   |
-| first_name_kana    | string | null: false                   |
-| birthday           | date   | null: false                   |
-
-### Association
-has_many:items
-has_many:buyers
+# 画面遷移図
 
 
-## items テーブル
+# 環境開発
+・ruby 2.6.5
+・Rails 6.0.6.1
+・MySQL 14.14
 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| name               | string     | null: false                    |
-| description        | text       | null: false                    |
-| category_id        | integer    | null: false                    |
-| status_id          | integer    | null: false                    |
-| delivery_charge_id | integer    | null: false                    |
-| shipping_area_id   | integer    | null: false                    |
-| delivery_day_id    | integer    | null: false                    |
-| price              | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
-
-
-### Association
-belongs_to:user
-has_one:buyer
-belongs_to:category
-belongs_to:status
-belongs_to:delivery_charge
-belongs_to:delivery_day
-belongs_to:shipping_area
-
-## shipping_addresses テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| post_code          | string     | null: false                    |
-| shipping_area_id   | integer    | null: false                    |
-| city               | string     | null: false                    |
-| address            | string     | null: false                    |
-| building_name      | string     |                                |
-| phone_number       | string     | null: false                    |
-| buyer              | references | null: false,foreign_key: true  |
-
-### Association
-
-belongs_to:buyer
-belongs_to:shipping_area
-
-## buyers テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| user               | references | null: false, foreign_key: true |
-| item               | references | null: false, foreign_key: true |
-
-### Association
-
-belongs_to:user
-belongs_to:item
-has_one:shipping_address
+# ローカルでの動作方法
