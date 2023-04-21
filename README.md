@@ -34,7 +34,7 @@ Pass: 2222
 # 実装機能
 
 ## 1.トップページ
-
+https://gyazo.com/a529caa85e9eaeede06756b25bfbe331
 [![Image from Gyazo](https://i.gyazo.com/a529caa85e9eaeede06756b25bfbe331.gif)](https://gyazo.com/a529caa85e9eaeede06756b25bfbe331)
 
 [![Image from Gyazo](https://i.gyazo.com/27dbc1d9f177044f7effaa1e8de05800.gif)](https://gyazo.com/27dbc1d9f177044f7effaa1e8de05800)
