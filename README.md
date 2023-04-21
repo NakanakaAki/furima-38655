@@ -31,19 +31,15 @@ Pass: 2222
 
 
 # 実装機能
+
 ## 1.トップページ
 
 [![Image from Gyazo](https://i.gyazo.com/df824a05d5494a712e0eb86a0f670f88.gif)](https://gyazo.com/df824a05d5494a712e0eb86a0f670f88)
-
-
-
-
 
 ## 2.ユーザー登録機能
 ユーザー登録することで出品・購入できるようになります。（ユーザー登録していない人でも出品している商品を見ることは可能です。）
 
 [![Image from Gyazo](https://i.gyazo.com/1e863ca3beedf0f99c011860a6d21737.gif)](https://gyazo.com/1e863ca3beedf0f99c011860a6d21737)
-
 
 
 ## 3.商品出品機能
