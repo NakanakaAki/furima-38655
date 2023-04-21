@@ -36,6 +36,9 @@ Pass: 2222
 [![Image from Gyazo](https://i.gyazo.com/df824a05d5494a712e0eb86a0f670f88.gif)](https://gyazo.com/df824a05d5494a712e0eb86a0f670f88)
 
 
+
+
+
 ## 2.ユーザー登録機能
 ユーザー登録することで出品・購入できるようになります。（ユーザー登録していない人でも出品している商品を見ることは可能です。）
 
