@@ -29,6 +29,12 @@ Pass: 2222
 メールアドレス名: aaa@aaa
 パスワード: aaa111
 
+
+# 実装機能
+
+## 1.トップページ
+[![Image from Gyazo](https://i.gyazo.com/27dbc1d9f177044f7effaa1e8de05800.gif)](https://gyazo.com/27dbc1d9f177044f7effaa1e8de05800)
+
 [![Image from Gyazo](https://i.gyazo.com/27dbc1d9f177044f7effaa1e8de05800.gif)](https://gyazo.com/27dbc1d9f177044f7effaa1e8de05800)
 
 ## 2.ユーザー登録機能
