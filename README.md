@@ -34,8 +34,7 @@ Pass: 2222
 # 実装機能
 
 ## 1.トップページ
-
-<a href="https://gyazo.com/9f9157e7bf4a9f7d030d9ac95cfeb096"><img src="https://i.gyazo.com/9f9157e7bf4a9f7d030d9ac95cfeb096.gif" alt="Image from Gyazo" width="1000"/></a>
+[![Image from Gyazo](https://i.gyazo.com/e64ba8582ad13401947aac180256eaae.gif)](https://gyazo.com/e64ba8582ad13401947aac180256eaae)
 
 
 ## 2.ユーザー登録機能
