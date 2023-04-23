@@ -77,13 +77,15 @@ Pass: 2222
 
 # 環境開発
 ・ruby 2.6.5
+
 ・Rails 6.0.6.1
+
 ・MySQL 14.14
 
 # ローカルでの動作方法
-% git clone https://github.com/NakanakaAki/furima-38655.git
-% cd furima-38655
-% bundle install
-% rails db:create
-% rails db:migrate
-% yarn install
+・% git clone https://github.com/NakanakaAki/furima-38655.git  
+・% cd furima-38655  
+・% bundle install  
+・% rails db:create  
+・% rails db:migrate  
+・% yarn install  
