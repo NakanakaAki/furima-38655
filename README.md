@@ -73,7 +73,7 @@ Pass: 2222
 [![Image from Gyazo](https://i.gyazo.com/3d52a53b49a20f9b814f34214eab41b1.png)](https://gyazo.com/3d52a53b49a20f9b814f34214eab41b1)
 
 # 画面遷移図
-
+[![Image from Gyazo](https://i.gyazo.com/d6df39a3c5629081624231ec35f628cc.png)](https://gyazo.com/d6df39a3c5629081624231ec35f628cc)
 
 # 環境開発
 ・ruby 2.6.5
@@ -81,3 +81,9 @@ Pass: 2222
 ・MySQL 14.14
 
 # ローカルでの動作方法
+% git clone https://github.com/NakanakaAki/furima-38655.git
+% cd furima-38655
+% bundle install
+% rails db:create
+% rails db:migrate
+% yarn install
